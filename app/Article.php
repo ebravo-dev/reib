@@ -10,12 +10,18 @@ class Article extends Model
         'title',
         'authors',
         'institute',
-        'edition',
+        'month',
+        'year',
         'volume',
         'number',
         'eskeywords',
         'enkeywords',
         'esabstract',
-        'enabstract'
+        'enabstract',
+        'enabstract',
+        'category',
+        'indexnumber',
+        'linkpdf',
+        'linkheader',
     ];
 }

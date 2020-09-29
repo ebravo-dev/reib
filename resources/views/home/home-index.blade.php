@@ -2,6 +2,7 @@
 
 @section('content')
 
+    @include('partials.navbar')
     <!-- Page Content -->
     <div class="container">
 
@@ -20,7 +21,7 @@
                     publicación
                     bimensual, dirigida al público iberoamericano, que publica artículos en castellano.</p>
                 <br>
-                <a class="btn boton-descargar" href="#">{{ $currentMonth }} {{ $year }}</a>
+                <a class="btn boton-descargar" href="#">{{ $currentMonth }} {{ $currentYear }}</a>
             </div>
             <!-- /.col-md-4 -->
         </div>
@@ -53,7 +54,7 @@
                 <div class="icon-box">
                     <div class="icon"><i class="ri-history-line"></i></div>
                     <h4 class="title"><a href="">Última Edición</a></h4>
-                    <p class="description">Disponible la edición del mes {{ $currentMonth }} {{ $year }}</p>
+                    <p class="description">Disponible la edición del mes {{ $currentMonth }} {{ $currentYear }}</p>
                 </div>
             </div>
 
@@ -85,7 +86,8 @@
     @include('home.instrucciones')
     @include('home.enviar')
     @include('home.contacto')
-
+    @include('partials.footer')
+    {{--
     <!-- Footer -->
     <footer class="py-5 bg-dark shadow ">
         <div class="container ">
@@ -93,5 +95,5 @@
                 editor@reibci.org | Privacy Policy</p>
         </div>
         <!-- /.container -->
-    </footer>
+    </footer> --}}
 @endsection

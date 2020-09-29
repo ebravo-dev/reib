@@ -8,18 +8,19 @@
     <title>Reibci</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     <script src="https://unpkg.com/eva-icons"></script>
 </head>
 
 
 <body class="bg-white">
-    @include('partials.navbar')
+
 
     @yield('content')
 
 
-    <script src="js/app.js"></script>
     {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -33,6 +34,7 @@
         eva.replace()
 
     </script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 
 

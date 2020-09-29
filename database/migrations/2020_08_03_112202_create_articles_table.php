@@ -15,16 +15,21 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('authors');
-            $table->string('institute');
-            $table->string('edition');
-            $table->string('volume');
-            $table->string('number');
-            $table->string('eskeywords');
-            $table->string('enkeywords');
-            $table->longText('esabstract');
-            $table->longText('enabstract');
+            $table->string('title')->nullable();
+            $table->text('authors')->nullable();
+            $table->string('institute')->nullable();
+            $table->string('month')->nullable();
+            $table->integer('year')->nullable();
+            $table->string('volume')->nullable();
+            $table->string('number')->nullable();
+            $table->string('eskeywords')->nullable();
+            $table->string('enkeywords')->nullable();
+            $table->longText('esabstract')->nullable();
+            $table->longText('enabstract')->nullable();
+            $table->string('category')->nullable();
+            $table->integer('indexnumber')->nullable();
+            $table->string('linkpdf')->nullable();
+            $table->string('linkheader')->nullable();
             $table->timestamps();
         });
     }

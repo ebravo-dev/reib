@@ -35,6 +35,10 @@ h6 {
   color: #ffffff !important;
 }
 
+.boton-descargar-portada {
+  border-radius: 0px !important;
+}
+
 .logo-nav-bar:hover {
   color: #16507b;
 }
@@ -45,6 +49,7 @@ a:hover {
 }
 
 a {
+  text-decoration: none !important;
   transition: 0.3s;
 }
 
@@ -487,6 +492,121 @@ section {
   .dropdown-submenu > .dropdown-menu {
     display: block;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 18px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 28px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.chip-2 {
+  background-color: #EBF0F8;
+  color: #6385c9 !important;
+}
+
+.chip-5 {
+  background-color: #F5EBF8;
+  color: #b263c9 !important;
+}
+
+.chip-0 {
+  background-color: #e0f4f4;
+  color: #479696 !important;
+}
+
+.chip-3 {
+  background-color: #F8EBEB;
+  color: #C96363 !important;
+}
+
+.chip-4 {
+  background-color: #EFF6EC;
+  color: #80B76A !important;
+}
+
+.chip-1 {
+  background-color: #F8F3EB;
+  color: #c99f63 !important;
+}
+
+.item-article {
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 10px !important;
+}
+
+.article-sm {
+  padding: 10px;
+  font-size: 80%;
+}
+
+.article-lg {
+  padding: 35px;
+}
+
+.item-article-2 {
+  border-left: 8px solid #6385c9;
+}
+
+.item-article-5 {
+  border-left: 8px solid #b263c9;
+}
+
+.item-article-0 {
+  border-left: 8px solid #479696;
+}
+
+.item-article-3 {
+  border-left: 8px solid #C96363;
+}
+
+.item-article-4 {
+  border-left: 8px solid #80B76A;
+}
+
+.item-article-1 {
+  border-left: 8px solid #c99f63;
+}
+
+.category-2 {
+  background-color: #6385c9 !important;
+}
+
+.category-5 {
+  background-color: #b263c9 !important;
+}
+
+.category-0 {
+  background-color: #479696 !important;
+}
+
+.category-3 {
+  background-color: #C96363 !important;
+}
+
+.category-4 {
+  background-color: #80B76A !important;
+}
+
+.category-1 {
+  background-color: #c99f63 !important;
 }
 
 /*!

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Edition;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -14,12 +15,24 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest()->paginate();
+        // $articles = Article::latest()->paginate();
 
-        return view('articles.articles-index', [
-            'articles' => $articles,
-            'home' => 'active',
-            'year' => '2020',
+        // return view('articles.articles-index', [
+        //     'articles' => $articles,
+        //     'home' => 'active',
+        //     'year' => '2020',
+        // ]);
+        $year = currentYear();
+        $editions = Edition::orderBy('year', 'DESC')->orderBy('month', 'DESC')->get();
+        $export_editions = [];
+        foreach ($editions as $edition) {
+            if (!isset($export_editions[$edition['year']]))
+                $export_editions[$edition['year']] = [];
+            array_push($export_editions[$edition['year']], toEsp($edition['month']));
+        }
+        return view('articles.articles-create', [
+            'article' => new Article(),
+            'editions' => $export_editions,
         ]);
     }
 
@@ -30,7 +43,11 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('articles.create', ['article' => new Article()]);
+        $year = currentYear();
+        return view('articles.create', [
+            'article' => new Article(),
+            'year' => $year,
+        ]);
     }
 
     /**
@@ -52,9 +69,20 @@ class ArticleController extends Controller
             'enkeywords' => 'required',
             'esabstract' => 'required',
             'enabstract' => 'required',
+            'enabstract' => 'required',
+            'category' => 'required',
+            'indexnumber' => 'required',
+            'linkpdf' => 'required',
+            'linkheader' => 'required',
         ]);
+        $aux = explode(" - ", $fields['edition']);
+        $fields['month'] = monthInNumber($aux[1]);
+        $fields['year'] = $aux[0];
+        // return $fields;
         Article::create($fields);
-        return $fields;
+        return redirect()->route('articles.index', [
+            'article' => new Article(),
+        ]);
     }
 
     /**
