@@ -2,17 +2,31 @@
 
 @section('content')
     @include('partials.navbar')
-    <p class="text-center font-weight-light h1 mt-5">Edición {{ $currentMonth }} {{ $year }}</p>
-    <p class="text-center font-weight-light text-secondary h4">{{ $volume }} {{ $number }}</p>
-    <div class="text-center mt-4 mb-5">
+    <div class="space-with-navbar"></div>
 
-        <a target="_blank" rel="noopener noreferrer" href="{{ $portada }}" type="button"
-            class="btn btn-outline-dark boton-descargar-portada pr-3 pl-3">Portada, hoja
-            legal e
-            índice</a>
+    <div class="text-center mt-5 pt-5 pb-3">
+        <span style="font-family:'Raleway'; font-size: 32px;
+                                                                        font-weight: bold;
+                                                                        text-transform: uppercase;
+                                                                        color: #124265;" class="text-center"><a
+                style="color:#124265;" target="_blank" rel="noopener noreferrer" href="{{ $portada }}" type="button"
+                class=" pr-3 pl-3">Ver
+                portada</a></span>
     </div>
 
-    <div class="container mt-5 pt-3 ">
+    {{-- <p class="text-center font-weight-light h1 mt-5 pt-5 pb-2"><a style="color:#000;"
+            target="_blank" rel="noopener noreferrer" href="{{ $portada }}" type="button" class=" pr-3 pl-3">Ver portada</a>
+    </p> --}}
+    <div class=" mb-3 text-center">
+        <p style="font-family:'Open Sans';" class="h5 font-weight-light">Estas viendo la publicación de {{ $currentMonth }}
+            {{ $year }}
+            {{ $volume }}
+            {{ $number }}
+
+        </p>
+    </div>
+
+    <div class="container mt-5  w-50">
         @php
         $current_category = "";
         $current_color = -1;
@@ -24,7 +38,7 @@
                 $current_category = $article['category'];
                 $current_color++;
                 @endphp
-                <div class="mb-3">
+                <div class="">
                     <div class="mr-5 ml-5 pl-4 pr-4 category-{{ $current_color }} shadow-sm">
                         <p class="h5 ml-1 mr-1  pt-3 pb-3 text-light text-center text-uppercase">{{ $article['category'] }}
                         </p>
@@ -75,6 +89,6 @@
     </div>
     <div class="mt-5">
 
-        @include('partials.footer')
+        {{-- @include('partials.footer') --}}
     </div>
 @endsection

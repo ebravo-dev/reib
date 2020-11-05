@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i);@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;
 
-0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);@charset "UTF-8";
-body {
+0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);@charset "UTF-8";
+.space-with-navbar {
   padding-top: 96px;
 }
 
@@ -103,8 +103,20 @@ a {
   background: #fefefe;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   transition: all 0.3s ease-in-out;
-  border-radius: 8px;
   z-index: 1;
+  border-radius: 8px;
+}
+
+.notice-box {
+  position: relative;
+  overflow: hidden;
+  background: #fefefe;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.notice-box:hover {
+  transform: scale(1.08);
 }
 
 .icon-box .title {
@@ -132,6 +144,12 @@ a {
   font-size: 36px !important;
   line-height: 1;
   color: #2487ce;
+}
+
+.icon-upload {
+  font-size: 70px !important;
+  font-weight: lighter !important;
+  color: #eaeaea;
 }
 
 .icon-box:hover {
@@ -516,7 +534,7 @@ input[type=number] {
   text-align: center;
 }
 
-.chip-2 {
+.chip-0 {
   background-color: #EBF0F8;
   color: #6385c9 !important;
 }
@@ -526,7 +544,7 @@ input[type=number] {
   color: #b263c9 !important;
 }
 
-.chip-0 {
+.chip-2 {
   background-color: #e0f4f4;
   color: #479696 !important;
 }
@@ -546,6 +564,11 @@ input[type=number] {
   color: #c99f63 !important;
 }
 
+.chip-default {
+  background-color: #EFEFF0;
+  color: #7C7E89 !important;
+}
+
 .item-article {
   padding: 15px;
   background-color: #fff;
@@ -561,7 +584,7 @@ input[type=number] {
   padding: 35px;
 }
 
-.item-article-2 {
+.item-article-0 {
   border-left: 8px solid #6385c9;
 }
 
@@ -569,12 +592,16 @@ input[type=number] {
   border-left: 8px solid #b263c9;
 }
 
-.item-article-0 {
+.item-article-2 {
   border-left: 8px solid #479696;
 }
 
 .item-article-3 {
   border-left: 8px solid #C96363;
+}
+
+.item-article-notice {
+  border-left: 4px solid #6385c9;
 }
 
 .item-article-4 {
@@ -585,7 +612,11 @@ input[type=number] {
   border-left: 8px solid #c99f63;
 }
 
-.category-2 {
+.item-article-default {
+  border-left: 8px solid #7C7E89;
+}
+
+.category-0 {
   background-color: #6385c9 !important;
 }
 
@@ -593,7 +624,7 @@ input[type=number] {
   background-color: #b263c9 !important;
 }
 
-.category-0 {
+.category-2 {
   background-color: #479696 !important;
 }
 
@@ -607,6 +638,65 @@ input[type=number] {
 
 .category-1 {
   background-color: #c99f63 !important;
+}
+
+#inputbar {
+  outline: 0px !important;
+  -webkit-appearance: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: #fff;
+}
+
+.searchbar {
+  box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+#body-card span {
+  font-weight: bold;
+  color: #6385c9;
+}
+
+.noticetext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.cardhometext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.noticetitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.flex-grow {
+  flex: 1 0 auto;
 }
 
 /*!

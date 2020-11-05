@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="h1 text-center mb-5">
+    <div class="h1 text-center mb-5 mt-5">
         Ingresar Nueva Edición
     </div>
     @include('partials.validate_errors')

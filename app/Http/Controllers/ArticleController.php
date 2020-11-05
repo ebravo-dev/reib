@@ -43,11 +43,11 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $year = currentYear();
-        return view('articles.create', [
-            'article' => new Article(),
-            'year' => $year,
-        ]);
+        // $year = currentYear();
+        // return view('articles.create', [
+        //     'article' => new Article(),
+        //     'year' => $year,
+        // ]);
     }
 
     /**

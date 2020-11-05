@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm rounded">
     <div class="container">
-        <a class="navbar-brand logo-nav-bar" href="{{ route('home.index') }}">ReIbCi</a>
+        <a class="navbar-brand logo-nav-bar" href="{{ route('home.index') }}#">ReIbCi</a>
         <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="text-light"><i data-eva-fill="#fff" data-eva="menu-outline"></i></span>
@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto text-center">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('home.index') }}">Inicio
+                    <a class="nav-link" href="{{ route('home.index') }}#">Inicio
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -60,12 +60,12 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Avisos</a>
+                    <a class="nav-link" href="{{ route('notices.index') }}">Avisos</a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Búsqueda</a>
+                    <a class="nav-link" href="{{ route('search.index') }}">Búsqueda</a>
                 </li>
 
 

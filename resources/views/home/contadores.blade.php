@@ -6,13 +6,13 @@
 
             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                 <div class="count-box">
-                    <span data-toggle="counter-up">30</span>
+                    <span data-toggle="counter-up">80</span>
                     <p>Insticuciones</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                 <div class="count-box">
-                    <span data-toggle="counter-up">50</span>
+                    <span data-toggle="counter-up">300</span>
                     <p>Autores</p>
                 </div>
             </div>
@@ -24,7 +24,7 @@
             </div>
             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                 <div class="count-box">
-                    <span data-toggle="counter-up">120</span>
+                    <span data-toggle="counter-up">500</span>
                     <p>Artículos</p>
                 </div>
             </div>

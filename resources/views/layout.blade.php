@@ -8,8 +8,9 @@
     <title>Reibci</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 
     <script src="https://unpkg.com/eva-icons"></script>
 </head>
